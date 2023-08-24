@@ -8,6 +8,12 @@ export default {
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
     },
+    fontFamily: {
+      sans: ["Newsreader", "serif"],
+    },
+    backgroundImage: {
+      "hero-bg": "url('./assets/hero-bg.svg')",
+    },
   },
   plugins: [],
 };

@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import styled from "styled-components";
+
+interface MenuOptions {
+  menu: "home" | "about" | "blog" | "contact";
+}
 
 const Navbar = () => {
   const [isClosed, setIsClosed] = useState(true);
-
+  const [isSelected, setIsSelected] = useState<MenuOptions>({ menu: "home" });
+  const List = styled.li`
+    background: ${isSelected ? "" : ""};
+    cursor: pointer;
+  `;
   return (
     <motion.div>
       <div className="w-100 p-5 bg-purple-600">
@@ -47,10 +56,19 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
         >
           <ul className="list-none text-7xl h-[100%] flex flex-col gap-10">
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <List
+              onClick={() => {
+                setIsSelected({ menu: "home" });
+                setIsClosed(!closed);
+              }}
+            >
+              Home
+            </List>
+            <List onClick={() => setIsSelected({ menu: "about" })}>About</List>
+            <List onClick={() => setIsSelected({ menu: "blog" })}>Blog</List>
+            <List onClick={() => setIsSelected({ menu: "contact" })}>
+              Contact
+            </List>
           </ul>
         </motion.div>
       </motion.div>
