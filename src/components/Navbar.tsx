@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
-
+import logo from "../assets/logo.png";
 interface MenuOptions {
   menu: "home" | "about" | "blog" | "contact";
 }
@@ -14,8 +14,15 @@ const Navbar = () => {
     cursor: pointer;
   `;
   return (
-    <motion.div>
-      <div className="w-100 p-5 bg-purple-600">
+    <div className="md:px-10">
+      <div className="w-100 p-5 flex justify-between">
+        <div>
+          <img
+            src={logo}
+            className="w-[90px] h-[50px] md:w-[120px] md:h-[70px]"
+          />
+        </div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -46,16 +53,14 @@ const Navbar = () => {
         initial={{ x: -2000 }}
         animate={{ x: 0 }}
         transition={{ duration: 2 }}
-        className={`w-full h-[90vh] bg-purple-600 ${
-          isClosed ? "hidden" : "block"
-        }`}
+        className={`w-full h-[90vh] ${isClosed ? "hidden" : "block"}`}
       >
         <motion.div
           className="text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <ul className="list-none text-7xl h-[100%] flex flex-col gap-10">
+          <ul className="list-none text-7xl my-auto h-[100%] flex flex-col gap-10">
             <List
               onClick={() => {
                 setIsSelected({ menu: "home" });
@@ -72,7 +77,7 @@ const Navbar = () => {
           </ul>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

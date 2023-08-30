@@ -8,8 +8,14 @@ export default {
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
     },
+    colors: {
+      primary: "#C59CEF",
+      white: "#fff",
+      black: "#111",
+    },
     fontFamily: {
-      sans: ["Newsreader", "serif"],
+      display: ["Cherry Cream Soda"],
+      sans: ["Poppins", "sans-serif"],
     },
     backgroundImage: {
       "hero-bg": "url('./assets/hero-bg.svg')",
