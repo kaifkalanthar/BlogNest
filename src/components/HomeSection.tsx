@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import hero from "../assets/hero.svg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import styled from "styled-components";
+import hero from "../assets/hero.svg";
+
+export const Button = styled.button`
+  background: #c59cef;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  display: flex;
+`;
 const HomeSection = () => {
-  const Button = styled.button`
-    background: #c59cef;
-    padding: 1rem 2rem;
-    border-radius: 60px;
-    display: flex;
-  `;
   return (
     <div className="w-full h-fit bg-hero-bg flex flex-col-reverse justify-between md:flex-row overflow-hidden">
       <div className="my-5 md:my-auto md:ml-8 flex flex-col gap-5">

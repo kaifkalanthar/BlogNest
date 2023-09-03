@@ -4,6 +4,7 @@
 
 body {
   background: #efefef;
+  overflow-x: hidden;
 }
 
 /* For Webkit browsers (Chrome, Safari, newer versions of Opera) */
