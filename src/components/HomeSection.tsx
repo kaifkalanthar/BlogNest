@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import styled from "styled-components";
 import hero from "../assets/hero.svg";
+import { Link } from "react-router-dom";
 
 export const Button = styled.button`
   background: #c59cef;
@@ -40,12 +41,14 @@ const HomeSection = () => {
           optio?
         </p>
         <div className="w-fit">
-          <Button>
-            Get Started{" "}
-            <span className="mx-2 my-auto hover:translate-x-2 duration-100">
-              <AiOutlineArrowRight />
-            </span>
-          </Button>
+          <Link to="create-blog">
+            <Button>
+              Get Started{" "}
+              <span className="mx-2 my-auto hover:translate-x-2 duration-100">
+                <AiOutlineArrowRight />
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="w-full">
